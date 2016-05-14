@@ -1,12 +1,9 @@
-import org.omg.CORBA.TIMEOUT;
-
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.Iterator;
 import java.util.Set;
 
@@ -14,8 +11,8 @@ import java.util.Set;
  * Created by n_buga on 14.05.16.
  */
 public class NonBlockingServer {
-    private final static int PORT = 8081;
-    private final static int TIMEOUT = 100;
+    private static final int PORT = 8081;
+    private static final int TIMEOUT = 100;
 
     private Path filePath;
     private int fileSize;

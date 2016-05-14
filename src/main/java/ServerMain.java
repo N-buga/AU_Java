@@ -1,9 +1,3 @@
-import java.io.IOException;
-import java.nio.Buffer;
-import java.nio.ByteBuffer;
-import java.nio.channels.ByteChannel;
-import java.nio.channels.FileChannel;
-import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Scanner;
@@ -11,13 +5,15 @@ import java.util.Scanner;
 /**
  * Created by n_buga on 14.05.16.
  */
-public class ServerMain {
-    public static void out_format() {
+public final class ServerMain {
+    private ServerMain() {}
+
+    public static void outFormat() {
         System.out.printf("need the name of file as an argument");
     }
     public static void main(String[] args) {
         if (args.length == 0) {
-            out_format();
+            outFormat();
             return;
         }
         String fileName = args[0];
